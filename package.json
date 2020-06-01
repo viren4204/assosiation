@@ -1,0 +1,22 @@
+{
+  "name": "assossiation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "embed.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viren4204/assosiation.git"
+  },
+  "author": "Birendra kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viren4204/assosiation/issues"
+  },
+  "homepage": "https://github.com/viren4204/assosiation#readme",
+  "dependencies": {
+    "mongoose": "^5.9.16"
+  }
+}
