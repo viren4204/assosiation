@@ -32,23 +32,36 @@ var Post = mongoose.model("Post", postSchema);
 // 	}
 // });
 
-Post.create({
-	title: "how to cook a sandwich",
-	content: "its basically simple , but still i don't know how to cook a sandwich. "
-},function(err, post){
-	User.findOne({email:"shanti@roy.com"},function(err, foundUser){
-		if (err) {
-			console.log(err);
-		} else {
-			foundUser.posts.push(post);
-			foundUser.save(function(err, data){
-				if (err) {
-					console.log(err);
-				} else {
-					console.log(data); 
-				}
-			});
-		}
-	});
+// Post.create({
+// 	title: "how to cook a sandwich",
+// 	content: "its basically simple , but still i don't know how to cook a sandwich. "
+// },function(err, post){
+// 	User.findOne({email:"shanti@roy.com"},function(err, foundUser){
+// 		if (err) {
+// 			console.log(err);
+// 		} else {
+// 			foundUser.posts.push(post);
+// 			foundUser.save(function(err, data){
+// 				if (err) {
+// 					console.log(err);
+// 				} else {
+// 					console.log(data); 
+// 				}
+// 			});
+// 		}
+// 	});
+// });
+//  
+
+
+
+//find user
+User.findOne({email: "shanti@roy.com"}).populate("posts").exec(function(err, user){
+ if (err) {
+ 	console.log(err);
+ } else {
+ 		console.log(user);
+ }
 });
- 
+
+//find all posts for that user
