@@ -21,14 +21,20 @@ var Post = mongoose.model("Post", postSchema);
  });
  var User = mongoose.model("User", userSchema);
  
-User.create({
-	email: "shanti@roy.com",
-	name: "Shanti Roy"
-}, function(err, user){
-	if (err) {
-		console.log(err);
-	} else {
-		console.log(user); 
-	}
-});
+// User.create({
+// 	email: "shanti@roy.com",
+// 	name: "Shanti Roy"
+// }, function(err, user){
+// 	if (err) {
+// 		console.log(err);
+// 	} else {
+// 		console.log(user); 
+// 	}
+// });
 
+Post.create({
+	title: "What is your fav food?",
+	content: "i love non veg, specially chicken tikka masala"
+},function(err, post){
+	console.log(post);
+});
