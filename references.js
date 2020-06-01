@@ -33,8 +33,22 @@ var Post = mongoose.model("Post", postSchema);
 // });
 
 Post.create({
-	title: "What is your fav food?",
-	content: "i love non veg, specially chicken tikka masala"
+	title: "how to cook a burger.",
+	content: "blah blah blah i don't know. "
 },function(err, post){
-	console.log(post);
+	User.findOne({email:"shanti@roy.com"},function(err, foundUser){
+		if (err) {
+			console.log(err);
+		} else {
+			foundUser.posts.push(post);
+			foundUser.save(function(err, data){
+				if (err) {
+					console.log(err);
+				} else {
+					console.log(data);
+				}
+			})
+		}
+	})
 });
+ 
