@@ -33,8 +33,8 @@ var Post = mongoose.model("Post", postSchema);
 // });
 
 Post.create({
-	title: "how to cook a burger.",
-	content: "blah blah blah i don't know. "
+	title: "how to cook a sandwich",
+	content: "its basically simple , but still i don't know how to cook a sandwich. "
 },function(err, post){
 	User.findOne({email:"shanti@roy.com"},function(err, foundUser){
 		if (err) {
@@ -45,10 +45,10 @@ Post.create({
 				if (err) {
 					console.log(err);
 				} else {
-					console.log(data);
+					console.log(data); 
 				}
-			})
+			});
 		}
-	})
+	});
 });
  
