@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/viren4204/assosiation#readme",
   "dependencies": {
-    "mongoose": "^5.9.16"
+    "mongoose": "^5.13.15"
   }
 }
